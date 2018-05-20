@@ -1,7 +1,7 @@
 class Chef
   class Provider
     class RemoteFile
-      class CustomLocalFile < Chef::Provider::RemoteFile::LocalFile
+      class LocalFile
         def fetch
           tempfile = Chef::FileContentManagement::Tempfile.new(new_resource).tempfile
           Chef::Log.debug("#{new_resource} staging #{source_path} to #{tempfile.path}")

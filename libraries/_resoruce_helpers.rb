@@ -64,7 +64,6 @@ module Knotx
         dst,
         run_context
       )
-      remote_file.provider(Chef::Provider::RemoteFile::CustomLocalFile)
       remote_file.owner('root')
       remote_file.group('root')
       remote_file.source(src)
